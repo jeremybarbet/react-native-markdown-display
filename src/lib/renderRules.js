@@ -300,9 +300,11 @@ const renderRules = (textLimit) => ({
   // Text Output
   text: (node, children, parent, styles, inheritedStyles = {}, onLinkPress) => {
     if (textLimit) {
+      const longerThanLimit = node.content.length >= textLimit;
+
       return (
         <Text key={node.key} style={[inheritedStyles, styles.text]}>
-          {node.content.slice(0, textLimit)}... <Text
+          {longerThanLimit ? `${node.content.slice(0, textLimit)}...}` : node.content} <Text
             style={[inheritedStyles, styles.link]}
             onPress={() => openUrl('/seemore', onLinkPress)}>
             See more
