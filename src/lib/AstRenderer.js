@@ -154,13 +154,19 @@ export default class AstRenderer {
         }
       }
 
-      return renderFunction(node, children, parentNodes, this._style, styleObj);
+      return renderFunction(
+        node,
+        children,
+        parentNodes,
+        this._style,
+        styleObj,
+        node.type === 'text' ? this._onLinkPress : undefined,
+      );
     }
 
     // cull top level children
 
     if (
-      isRoot === true &&
       this._maxTopLevelChildren &&
       children.length > this._maxTopLevelChildren
     ) {

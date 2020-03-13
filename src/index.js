@@ -80,6 +80,7 @@ const getRenderer = (
   allowedImageHandlers,
   defaultImageHandler,
   debugPrintTree,
+  textLimit,
 ) => {
   if (renderer && rules) {
     console.warn(
@@ -107,7 +108,7 @@ const getRenderer = (
 
     return new AstRenderer(
       {
-        ...renderRules,
+        ...renderRules(textLimit),
         ...(rules || {}),
       },
       useStyles,
@@ -155,6 +156,7 @@ const Markdown = React.memo(
     ],
     defaultImageHandler = 'https://',
     debugPrintTree = false,
+    textLimit = undefined,
   }) => {
     const momoizedRenderer = useMemo(
       () =>
@@ -169,6 +171,7 @@ const Markdown = React.memo(
           allowedImageHandlers,
           defaultImageHandler,
           debugPrintTree,
+          textLimit,
         ),
       [
         maxTopLevelChildren,
@@ -181,6 +184,7 @@ const Markdown = React.memo(
         allowedImageHandlers,
         defaultImageHandler,
         debugPrintTree,
+        textLimit,
       ],
     );
 
