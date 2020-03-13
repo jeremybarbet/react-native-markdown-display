@@ -1,5 +1,5 @@
 {
-  "name": "react-native-markdown-display",
+  "name": "@jeremybarbet/react-native-markdown-display",
   "version": "6.0.1",
   "description": "Markdown renderer for react-native, with CommonMark spec support + adds syntax extensions & sugar (URL autolinking, typographer), originally created by Mient-jan Stelling as react-native-markdown-renderer",
   "main": "src/index.js",
@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iamacup/react-native-markdown-display.git"
+    "url": "git+https://github.com/jeremybarbet/react-native-markdown-display.git"
   },
   "keywords": [
     "react",
@@ -25,9 +25,9 @@
   "author": "Mient-jan Stelling and Tom Pickard + others from the community",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iamacup/react-native-markdown-display/issues"
+    "url": "https://github.com/jeremybarbet/react-native-markdown-display/issues"
   },
-  "homepage": "https://github.com/iamacup/react-native-markdown-display/",
+  "homepage": "https://github.com/jeremybarbet/react-native-markdown-display/",
   "dependencies": {
     "css-to-react-native": "^3.0.0",
     "markdown-it": "^10.0.0",
